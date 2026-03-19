@@ -26,12 +26,31 @@ namespace WebCinestar.Database
             cmd.Parameters.Clear();
         }
         //obtener tabla
-        internal DataTable getTabla(string tabla)
+        internal DataTable getTabla()
         {
             DataTable tb = new DataTable();
             dt.Fill(tb);
             return tb;
 
+        }
+        internal string[]? getRegistro()
+        {
+            DataTable dt = getTabla();
+            if (dt.Rows.Count == 0) return null;
+            return Array.ConvertAll(dt.Rows[0].ItemArray,
+                                    x => x?.ToString()?.Trim() ?? "");
+        }
+
+        internal string[][]? getRegistros()
+        {
+            DataTable dt = getTabla();
+            if (dt.Rows.Count == 0) return null;
+            int i = 0;
+            string[][] registros = new string[dt.Rows.Count][];
+            foreach (DataRow dr in dt.Rows)
+                registros[i++] = Array.ConvertAll(dr.ItemArray,
+                                                  x => x?.ToString()?.Trim() ?? "");
+            return registros;
         }
 
     }

@@ -13,6 +13,7 @@
         public string Link { get; set; }
         public string Reparto { get; set; }
         public string Sinopsis { get; set; }
-        
+        public string GenerosDetalle { get; set; }
+
     }
 }

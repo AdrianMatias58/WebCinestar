@@ -7,6 +7,6 @@ namespace WebCinestar.Models
         public int idCine { get; set; }
         public string DiasSemana { get; set; }
 
-        public float Precio { get; set; }
+        public string Precio { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace WebCinestar.Models
         public int idCine {  get; set; }
         public int idPelicula {  get; set; }
         public int Sala { get; set; }
+        public string Titulo { get; set; }
         public string Horarios { get; set; }
     }
 }
