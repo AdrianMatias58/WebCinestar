@@ -20,7 +20,7 @@ namespace WebCinestar.Controllers
         public IActionResult verPelicula(int idPelicula)
         {
             var pelicula = _Pr.GetPeliculaById(idPelicula);
-            return View();
+            return View(pelicula);
         }
     }
 }
