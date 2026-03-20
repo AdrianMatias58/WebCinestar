@@ -15,7 +15,7 @@ namespace WebCinestar.Controllers
             _cRepo = new CineRepo(configuration);
             _pRepo = new PeliculaRepo(configuration);
         }
-        // GET: api/ApiCinestar/cines
+        //api/ApiCinestar/cines
         [HttpGet("cines")]
         public IActionResult GetCines()
         {
@@ -23,7 +23,7 @@ namespace WebCinestar.Controllers
             return Ok(cines);
         }
 
-        // GET: api/ApiCinestar/cine/3
+        //api/ApiCinestar/cine/3
         [HttpGet("cine/{id}")]
         public IActionResult GetCine(int id)
         {
@@ -32,7 +32,7 @@ namespace WebCinestar.Controllers
             return Ok(cine);
         }
 
-        // GET: api/ApiCinestar/cine/3/tarifas
+        //api/ApiCinestar/cine/3/tarifas
         [HttpGet("cine/{id}/tarifas")]
         public IActionResult GetTarifas(int id)
         {
@@ -40,7 +40,7 @@ namespace WebCinestar.Controllers
             return Ok(tarifas);
         }
 
-        // GET: api/ApiCinestar/cine/3/peliculas
+        //api/ApiCinestar/cine/3/peliculas
         [HttpGet("cine/{id}/peliculas")]
         public IActionResult GetCinePeliculas(int id)
         {
@@ -48,7 +48,7 @@ namespace WebCinestar.Controllers
             return Ok(peliculas);
         }
 
-        // GET: api/ApiCinestar/peliculas?idEstado=
+        //api/ApiCinestar/peliculas?idEstado=
         [HttpGet("peliculas")]
         public IActionResult GetPeliculas(int idEstado )
         {
@@ -56,7 +56,7 @@ namespace WebCinestar.Controllers
             return Ok(peliculas);
         }
 
-        // GET: api/ApiCinestar/pelicula/idPelicula
+        //api/ApiCinestar/pelicula/idPelicula
         [HttpGet("pelicula/{id}")]
         public IActionResult GetPelicula(int id)
         {
