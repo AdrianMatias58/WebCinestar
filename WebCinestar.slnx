@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="AzureFuncionCineStar/AzureFuncionCineStar.csproj" Id="0fdd1715-afa2-4c4f-b811-5d2cde190d66" />
   <Project Path="WebCinestar/WebCinestar.csproj" />
 </Solution>
