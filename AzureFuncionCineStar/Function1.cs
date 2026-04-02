@@ -38,7 +38,7 @@ public class Function1
         await response.WriteAsJsonAsync(Cine);
         return response;
     }
-    [Function("Peliculas")]
+    [Function("GetPeliculas")]
     public async Task<HttpResponseData> GetPeliculasEstado([HttpTrigger(AuthorizationLevel.Anonymous,"get", Route ="peliculas/estado/{id}")] HttpRequestData req, int id)
     {
         _logger.LogInformation("Ejecutando consulta de obtener Peliculas...");
@@ -47,6 +47,7 @@ public class Function1
         await response.WriteAsJsonAsync(peliculas);
         return response;
     }
+    [Function("GetPelicula")]
     public async Task<HttpResponseData> GetPelicula([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "pelicula/{id}")] HttpRequestData req, int id)
     {
         _logger.LogInformation("Ejecutando consulta de obtener Pelicula...");
